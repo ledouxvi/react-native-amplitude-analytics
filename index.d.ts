@@ -10,6 +10,7 @@ export default class Amplitude {
   clearUserProperties(): void;
   getDeviceId(): Promise<string>;
   regenerateDeviceId(): void;
+  uploadEvents(): void;
   setLogEventPrefix(prefix: string): void;
 
   // --------------------------------------------------

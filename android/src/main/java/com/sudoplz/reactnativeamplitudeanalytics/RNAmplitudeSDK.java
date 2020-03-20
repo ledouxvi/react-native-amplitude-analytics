@@ -83,6 +83,12 @@ public class RNAmplitudeSDK extends ReactContextBaseJavaModule {
   }
 
   @ReactMethod
+  public void uploadEvents() {
+    Amplitude.getInstance().uploadEvents();
+  }
+
+
+  @ReactMethod
   public void logEvent(String identifier) {
     Amplitude.getInstance().logEvent(identifier);
   }

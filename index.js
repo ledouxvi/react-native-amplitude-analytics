@@ -85,6 +85,14 @@ class Amplitude {
     }
   }
 
+  uploadEvents() {
+    if (amplitudeHasInitialized) {
+      return RNAmplitudeSDK.uploadEvents();
+    } else {
+      throw new Error('You called Amplitude.uploadEvents before initializing it. Run new Amplitute(key) first.');
+    }
+  }
+
   setLogEventPrefix(prefix) {
     if (amplitudeHasInitialized) {
       this.evPrefix = prefix;
